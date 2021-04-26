@@ -4,6 +4,6 @@
 GameScene::GameScene() 
 {
 	ShipPtr ship = std::make_shared<Ship>();
-	addGameObject(Ship);
+	addGameObject(ship);
 
 }
