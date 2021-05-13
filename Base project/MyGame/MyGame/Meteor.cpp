@@ -37,6 +37,7 @@ sf::FloatRect Meteor::getCollisionRect()
 
 void Meteor::handleCollision(GameObject& otherGameObject)
 {
+
 	if (otherGameObject.hasTag("laser"))
 	{
 		otherGameObject.makeDead();
