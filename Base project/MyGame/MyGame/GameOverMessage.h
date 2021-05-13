@@ -1,0 +1,16 @@
+#pragma once
+#include "Engine/GameEngine.h"
+
+class GameOverMessage : public GameObject
+{
+public:
+	GameOverMessage(int score);
+
+	void draw();
+	void update(sf::Time& Elapsed);
+
+private:
+	sf::Text text_.;
+};
+
+typedef std::sharped_ptr<GameOverMessage> GameOverMessage;
