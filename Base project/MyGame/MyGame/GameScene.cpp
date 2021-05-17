@@ -2,6 +2,7 @@
 #include "Ship.h"
 #include "MeteorSpawner.h"
 #include "Score.h"
+#include "GameOverScene.h"
 
 GameScene::GameScene() 
 {

@@ -18,12 +18,12 @@ void GameOverMessage::draw()
 	GAME.getRenderWindow().draw(text_);
 }
 
-void GameOverMessage::update(sf::Time& time);
+void GameOverMessage::update(sf::Time& time)
 {
-	if (sf::Keyoboard::isKeyPresed(sf::Keyboard::Return));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return))
 	{
 		GameScenePtr scene = std::make_shared<GameScene>();
-		GAME.setScene(Scene);
+		GAME.setScene(scene);
 		return;
 	}
 
