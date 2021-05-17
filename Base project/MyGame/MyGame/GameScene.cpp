@@ -32,7 +32,7 @@ void GameScene::decreaseLives()
 {
 	--lives_;
 	
-	if (lives_ == = 0)
+	if (lives_ == 0)
 	{
 		GameOverScenePtr gameOverScene = std::make_shared<GameOverScene>(score_);
 		GAME.setScene(gameOverScene);

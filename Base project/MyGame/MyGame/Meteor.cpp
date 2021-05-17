@@ -1,4 +1,5 @@
 #include "Meteor.h"
+#include "GameScene.h"
 
 const float SPEED = 0.55f;
 
@@ -21,6 +22,9 @@ void Meteor::update(sf::Time& elapsed) {
 
 	if (pos.x < sprite_.getGlobalBounds().width * -1)
 	{
+		GameScene& scene = (GameScene&)GAME.getCurrentScene();
+		scene.decreaseLives();
+
 		makeDead();
 	}
 	else

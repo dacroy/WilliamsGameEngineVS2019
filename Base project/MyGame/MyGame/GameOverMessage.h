@@ -10,7 +10,7 @@ public:
 	void update(sf::Time& Elapsed);
 
 private:
-	sf::Text text_.;
+	sf::Text text_;
 };
 
-typedef std::sharped_ptr<GameOverMessage> GameOverMessage;
+typedef std::shared_ptr<GameOverMessage> GameOverMessagePtr;
