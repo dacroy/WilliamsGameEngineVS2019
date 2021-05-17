@@ -42,9 +42,21 @@ sf::FloatRect Meteor::getCollisionRect()
 void Meteor::handleCollision(GameObject& otherGameObject)
 {
 
-	if (otherGameObject.hasTag("laser"))
+	if (otherGameObject.hasTag("Explosion"))
 	{
 		otherGameObject.makeDead();
+		sf::Vector2f pos = sprite_.getPosition();
+		float x = pos.x;
+		float y = pos.y;
+
+
+		sf::FloatRect bounds = sprite_.getGlobalBounds();
+
+		float explosionX = x + bounds.width;
+		float explosionY = y + (bounds.height / 2.0f);
+
+		ExplosionPtr explosion = std::make_shared<Explosion>(sf::Vector2f(explosionX, explosionY));
+		GAME.getCurrentScene().addGameObject(explosion);
 	}
 
 	makeDead();
